@@ -1,0 +1,120 @@
+<header style="position: sticky; top: 0; z-index: 501;">
+    <section class="container-content firstnav-area">
+        <nav class="navbar navbar-light navbar-expand-lg">
+            <div class="container-fluid p-0">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                {% if page.top_header_nav.0 %}
+                    <button data-bs-toggle="collapse" class="navbar-toggler collapsed" data-bs-target="#navcol-1" aria-controls="navcol-1" aria-expanded="false" aria-label="Toggle navigation">
+                        </span><span class="navbar-toggler-icon"></span>
+                    </button>
+                {% endif %}    
+                    <p class="ug-link"><a href="https://www.ug.edu.gh">  University of Ghana </a></p> 
+                </div>
+
+                <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navcol-1" style="">   
+                    {{ page.top_header_nav }}
+                </div>
+            
+            </div>
+        </nav>
+    </section>
+
+
+    <section class="container-content secondnav-area">
+        <div class="" id="secondnav">
+            <div class="d-flex">
+                {{ page.nav_branding }}
+                
+                <button data-bs-toggle="collapse" data-bs-target=".search-bar" class="search-bar-toggler d-md-block d-sm-block d-lg-none"><span class="search-bar-toggler-icon"></span></button>   
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2" aria-controls="navcol-2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  
+            </div>    
+
+            {{ page.main_navigation }}
+            
+            <button data-toggle="collapse" data-target=".search-bar" class="search-bar-toggler d-lg-block d-none"><span class="search-bar-toggler-icon"></span></button>   
+
+        </div>
+    </section>
+</header>    
+
+<div class="search-bar collapse">
+    {{ page.search_section }}
+</div>
+
+
+{{ page.hero }}
+
+{{ page.main_content }}
+
+
+<section class="pt-5 pb-5" style="background-color: #f4f3ff">
+    {{ page.news_header }}
+    <div class="container-content">
+        <div class="row">
+            {{ page.news_region }} 
+        </div>      
+    </div>    
+</section>
+
+
+
+<section id="news-section">
+    <div class="container-content">                          
+            {{ page.content }}
+    </div>
+</section>
+
+
+
+<footer class="footer-clean" style="background: #153D64;">
+    <div class="container-content">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3 text-left item" style="color: rgb(255,255,255);">
+                {{ page.footer_region_one }}
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-6 text-left item" style="color: rgb(255,255,255);">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 text-left item" style="color: rgb(255,255,255);">
+                        {{ page.footer_region_two }}
+                    </div> 
+
+                    <div class="col-sm-6 col-md-6 col-lg-6 text-left item" style="color: rgb(255,255,255);">
+                        {{ page.footer_region_three }}
+                    </div> 
+
+                    <div class="col-sm-6 col-md-6 col-lg-6 text-left item" style="color: rgb(255,255,255);">
+                        {{ page.footer_region_four}}
+                    </div> 
+
+                    <div class="col-sm-6 col-md-6 col-lg-6 text-left item" style="color: rgb(255,255,255);">
+                        {{ page.footer_region_five }}
+                    </div> 
+                </div>    
+            </div>
+            
+            <div class="col-sm-5 col-md-4 col-lg-2 item social" style="color: rgb(255,255,255);">
+                <div class="footer-give-social">
+                    {{ page.footer_give }} 
+                    <div class="socialIcons">
+                        {{ page.footer_social }}
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-content">
+        <div class="row" id="copyright">
+            <div class="col-sm-6 col-md-6">
+                <p id="developer-signature"><br><strong>Copyright © {{ calendar_year }}, University of Ghana</strong><br><br><br></p>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <p id="developer-signature" style="float: right;"><br><strong>Developed by University of Ghana Information Technology Directorate(UGITD)</strong><br><br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+    

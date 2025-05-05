@@ -1,0 +1,17 @@
+ul.menu.sidebar-first-menu{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul.menu.sidebar-first-menu a{
+    color: black;
+    text-decoration: none;
+}
+
+ul.menu.sidebar-first-menu a.is-active{
+    color: #b99d64;
+    font-weight: 600;
+}
+

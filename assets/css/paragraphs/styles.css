@@ -1,0 +1,119 @@
+/* What we do */
+.info {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .info-content, .info-image{
+        flex: 50%;
+    } 
+}
+
+
+.info-title{
+    font-weight: 700;
+}
+
+.info-image{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-link{
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;   
+}
+
+.info-link::after{
+    content: '\f0a9';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 800;
+    margin-left: 24px;
+    font-size: 36px;
+    color: #b99d64;
+}
+
+.info-link:hover{
+    color: #b99d64;
+    text-decoration: none;
+}
+
+/* Border Radius Utility */
+.rounded-edges{
+    border-radius: 12px;
+}
+
+/* Slideshow */
+.slide-img{
+    height: clamp(370px, 40vw, 750px);
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-caption{
+        text-align: left;
+        left: 12.5%;
+        right: 12.5%;
+        bottom: 15%;
+        width: 50%;
+    } 
+    
+    .carousel-indicators{
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-left: 12.5%;
+        bottom: 10%;
+    }
+}
+
+
+.carousel-caption .header{
+    font-size: clamp(1.3rem, 3vw, 2.9rem);
+}
+
+.carousel-caption .caption{
+    font-size: clamp(0.85rem, 3vw, 1rem);
+}
+
+.previous-slide, .next-slide{
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .carousel-indicators {
+        margin-left: 15%;
+    }
+}
+
+
+.carousel-indicators li.active{
+   background-color: #b99d64;
+   border:0;
+   height: 18.5px;
+   width: 18.5px;
+}
+
+.carousel-indicators li{
+    height: 15px;
+    width: 15px;
+    border: 2px solid #f6f6f6;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+/* Partners */
+.partners img{
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+/* Pillars */
+.pillars{
+    gap:0.75rem;
+    text-align: center;
+}

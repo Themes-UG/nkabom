@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+    text-size-adjust: auto;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--ug-black);
+  font-family: inherit;
+  font-weight: bolder;
+}
+
+p{
+  line-height: 1.8;
+  color: var(--ug-black);
+}
+
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Background-Colors */
+.bg-ug-blue{
+  background-color: var(--ug-blue) !important;
+}
+
+.bg-ug-gold{
+  background-color: var(--ug-gold) !important;
+}
+
+.bg-pale-blue{
+  background-color: var(--ug-pale-blue) !important;
+}
+
+.bg-ug-grey{
+  background-color: var(--ug-grey) !important;
+}
+
+.bg-ug-ash{
+  background-color: var(--ug-ash) !important;
+}
+
+.bg-ug-pale-gold{
+  background-color: var( --ug-pale-gold) !important;
+}
+
+
+/* Text Color */
+.tc-w{
+  color: white;
+}
+
+.tc-b{
+  color: var(--ug-black);
+}
+
+
+/* Container */
+.full-width-content{
+  margin-left: calc(50% - 49.6vw);
+  margin-right: calc(50% - 49.6vw);
+}
+
+

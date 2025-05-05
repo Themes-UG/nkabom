@@ -1,0 +1,32 @@
+images.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x
+    
+
+images.medium:
+  label: Medium
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+  
+
+images.large:
+  label: large
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 3
+  multipliers:
+    - 1x
+  
+
+ 
+images.x_large:
+  label: X large
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+    

@@ -1,0 +1,7 @@
+<div class="partners mt-3">
+    <div class="row justify-content-center align-items-center">
+    {% for i in content.field_logos['#items']|keys %}
+        {{ content.field_logos[i] }}
+    {% endfor %}
+    </div>
+</div>

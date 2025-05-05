@@ -1,0 +1,36 @@
+name: UG Nkabom Project Theme
+type: theme
+description: 'Official Drupal Theme For NKABOM Website'
+base theme: classy
+core_version_requirement:  ^9 || ^10
+screenshot: screenshot.png
+dependencies:
+  - classy:classy
+
+libraries:
+  - nkabom/global-css
+  - nkabom/google-fonts
+
+regions:
+  top_header_nav: 'Top header Navigation'
+  nav_branding: Nav branding
+  main_navigation: Main Navigation
+  search_section: Search Section
+  hero: Hero
+  
+  main_content: Main Content
+  
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  content: Content
+ 
+  footer_region_one: 'Footer Region 1'
+  footer_region_two:  'Footer Region 2'
+  footer_region_three: 'Footer Region 3'
+  footer_region_four: 'Footer Region 4'
+  footer_region_five: 'Footer Region 5'
+  footer_give: 'Give Region'
+  footer_social: Social Media Region
+
+
+

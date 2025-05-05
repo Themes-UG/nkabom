@@ -1,0 +1,7 @@
+background-light:
+  label: 'Light Background'
+  class: 'section-bg-light'
+
+background-dark:
+  label: 'Dark Background'
+  class: 'section-bg-dark'

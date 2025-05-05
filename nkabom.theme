@@ -1,0 +1,65 @@
+<?php
+
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+
+function nkabom_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__type__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+function nkabom_preprocess_block(&$variables): void {
+  if (empty($variables['elements']['#id'])) {
+    return;
+  }
+
+  $block = _load_block($variables['elements']['#id']);
+  if (!$block) {
+    return;
+  }
+
+  _process_system_menu_block($variables, $block);
+
+}
+
+function _load_block($id): ?EntityInterface {
+  return \Drupal::entityTypeManager()
+    ->getStorage('block')
+    ->load($id);
+}
+
+function _process_system_menu_block(&$variables, $block) {
+  if ($variables['base_plugin_id'] !== 'system_menu_block') {
+    return;
+  }
+
+  $region = $block->getRegion();
+  $variables['content']['#attributes']['region'] = $region;
+}
+
+
+function nkabom_theme_suggestions_menu_alter(array &$suggestions, array $variables): void {
+  if (isset($variables['attributes']['region'])) {
+    $region_suggestion = 'menu__' . $variables['attributes']['region'];
+
+    // Only add the suggestion if it's not already in the array.
+    if (!in_array($region_suggestion, $suggestions)) {
+      array_unshift($suggestions, $region_suggestion);
+    }
+  }
+}
+
+function nkabom_preprocess_page(&$variables) {
+  $today = strtolower(date('Y'));
+  $variables['calendar_year'] = $today;
+}
+
+?>
