@@ -5,10 +5,10 @@
 {% set link_url = content.field_link.0['#url'] %}
 {% set link_title = content.field_link.0['#title'] %}
 
-<div class="container-content">
+
 {% if position == 'Right' %}
 
-<div class="row">
+<div class="row align-items-center">
 	<div class="info-content col-lg-6 mb-3">
         <h2 class="info-title">{{ title }}</h2>
         <p class="info-body">{{ body }}</p>
@@ -22,7 +22,7 @@
 
 {% else %}
 
-<div class="row">
+<div class="row align-items-center">
     <div class="col-lg-6 mb-3">
         <img class="info-image" src="{{ media_uri }}" alt="">
     </div>
@@ -35,4 +35,3 @@
 </div>
 {% endif %}
 
-</div>

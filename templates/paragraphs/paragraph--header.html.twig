@@ -1,0 +1,24 @@
+
+{%
+  set classes = [
+    '',
+  ]
+%}
+
+  {% block paragraph %}
+      {% block content %} 
+        <div class="header">
+          <h2 class="font-weight-bold">{{ content.field_title.0 }}</h2>
+          {% if content.field_link.0 %}
+          <div class="header-link">
+              <a href="{{ content.field_link.0['#url'] }}" > <span> {{ content.field_link.0['#title'] }}</span> </a>
+          </div>
+          {% endif %}
+        </div> 
+             
+      {% endblock %}
+  {% endblock paragraph %}
+
+
+{# {{ content.field_image | json_encode(constant('JSON_PRETTY_PRINT')) }} #}
+

@@ -1,0 +1,8 @@
+<div class="partners">
+    <h2 class="font-weight-bold text-align-center">{{ content.field_title.0 }} </h2>
+    <div class="row justify-content-center align-items-center">
+    {% for i in content.field_images['#items']|keys %}
+        <div class="col-md-2 col-sm-4">{{ content.field_images[i] }}</div>
+    {% endfor %}
+    </div>
+</div>

@@ -44,20 +44,19 @@
    
   ]
 %}
-<section id="mission-vision" style="background: #F4F3FF;">
+
   {% block paragraph %}
-  <div class="mission-vision-container">
+  <div class="mission-vision">
     <div{{ attributes.addClass(classes) }}>
       {% block content %} 
         <div class="col-md-6">
-          <div class="mission">
+          <div class="mission bg-pale-blue rounded-edges">
             <h2 class="font-weight-bold">{{ content.field_mission_title.0 }} </h2>
             <p>{{ content.field_mission.0 }}</p>
           </div>
         </div>
         <div class="col-md-6">
-          
-          <div class="vision">
+          <div class="vision bg-pale-blue rounded-edges">
             <h2 class="font-weight-bold">{{ content.field_vision_title.0 }}</h2>
             <p>{{ content.field_vision.0 }}</p>
           </div>
@@ -66,7 +65,7 @@
     </div>
   </div>
   {% endblock paragraph %}
-</section> 
+ 
 
 {# {{ content.field_image | json_encode(constant('JSON_PRETTY_PRINT')) }} #}
 
