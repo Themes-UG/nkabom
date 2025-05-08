@@ -55,6 +55,10 @@ video {
   background-color: var(--ug-grey) !important;
 }
 
+.bg-ug-light-grey{
+  background-color: var(--ug-light-grey) !important;
+}
+
 .bg-ug-ash{
   background-color: var(--ug-ash) !important;
 }

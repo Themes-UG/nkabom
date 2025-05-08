@@ -1,0 +1,38 @@
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'home-page-banner'
+  ]
+%}
+
+
+
+<div{{ attributes.addClass(classes) }} style="background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 100%), url('{{ file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value) }}')">
+ 
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div class="container-content h-100">
+      <div class="home-page-banner-content d-flex flex-column h-100 justify-content-end pb-5">
+        <h2 class="home-page-banner-text">
+          {{ content.field_title.0 }}  
+        </h2>
+        <div class="ug-gold-button d-inline-block">
+          {{ content.field_link.0 }}
+        </div>
+      </div> 
+    </div>
+  {% endblock %}
+</div>
+
+
+ {# {{ content.field_media_image[0]['#media'].field_media_image.entity.uri.value | json_encode(constant('JSON_PRETTY_PRINT')) }}    #}
+{# 
+ {{  node.label | json_encode(constant('JSON_PRETTY_PRINT')) }}    #}
+
+

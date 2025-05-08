@@ -1,0 +1,13 @@
+  {% block paragraph %}
+  
+      {% block content %} 
+      <div class="ug-gold-button d-inline-block">
+        {{ content.field_link.0 }}
+      </div>    
+      {% endblock %}
+  
+  {% endblock paragraph %}
+
+
+{# {{ content.field_image | json_encode(constant('JSON_PRETTY_PRINT')) }} #}
+
