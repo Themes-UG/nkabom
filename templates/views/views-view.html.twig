@@ -49,11 +49,14 @@
   {{ exposed }}
   {{ attachment_before }}
 
+  <div class="view-content">
   {% if rows -%}
     {{ rows }}
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
+  </div> 
+  
   {{ pager }}
 
   {{ attachment_after }}

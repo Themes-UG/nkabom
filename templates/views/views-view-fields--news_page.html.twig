@@ -30,12 +30,13 @@
  */
 #}
 
-      <div style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.77) 100%), url('{{ fields.field_media_image.content }}') no-repeat center center/cover; height:100%; border-radius: 12px;">
-          <div class="news-details-container">
-              <div class="news-details">
-                  <span>{{ fields.created.content }}</span>
-                  <h5> {{ fields.title.content }} </h5>
-              </div>
-          </div>
-      </div>
-   
+    <a class="d-block news-card" href="{{ fields.view_node.content }}"> 
+     <div class="news-image">
+        {{ fields.field_image.content }}
+     </div>
+     <div class="news-detail p-4 bg-white">
+        {{ fields.created.content }}
+        <h4 class="mt-2 mb-2">{{ fields.title.content }} </h4>
+        <p class="news-summary">{{ fields.body.content }}</p>
+     </div>   
+    </a>

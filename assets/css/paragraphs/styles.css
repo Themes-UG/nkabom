@@ -22,24 +22,24 @@
 }
 
 .info-link{
-    font-weight: 600;
-    color: black;
+    font-weight: 500;
+    color: var(--ug-black);
     text-decoration: none;
     display: flex;
-    align-items: center;   
+    align-items: center; 
 }
 
 .info-link::after{
     content: '\f0a9';
     font-family: 'Font Awesome 5 Free';
     font-weight: 800;
-    margin-left: 24px;
-    font-size: 36px;
-    color: #b99d64;
+    margin-left: 18px;
+    font-size: 24px;
+    color: var(--ug-gold);
 }
 
 .info-link:hover{
-    color: #b99d64;
+    color: var(--ug-gold);
     text-decoration: none;
 }
 
@@ -70,12 +70,41 @@
     }   
 }
 
+
+/* Mini Banner */
+.mini-banner{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.mini-banner.Horizontal{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.mini-banner.Horizontal p{
+    padding-left: 48px;
+    border-left: 1px solid;
+}
+
+@media screen and (max-width: 767px) {
+    .mini-banner.Horizontal{
+        grid-template-columns: 1fr;
+    }
+    .mini-banner.Horizontal p{
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
+
 /* Slideshow */
 .slide-img{
     height: clamp(370px, 40vw, 750px);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     .carousel-caption{
         text-align: left;
         left: 12.5%;
@@ -165,6 +194,17 @@
     color: white;
     text-decoration: none; 
 }
+
+.header-link a::after, .ug-gold-button a::after{
+    content: "\f054";
+    font: var(--fa-font-solid);
+    font-size: 15px;
+    position: relative;
+    top: 0px;
+    margin-left: 12px;
+}
+}
+
 
 /* Core Values */
 .core-values-section img{

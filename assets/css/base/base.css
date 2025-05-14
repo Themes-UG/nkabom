@@ -15,18 +15,17 @@ body {
     font-style: normal;
     text-size-adjust: auto;
     scroll-behavior: smooth;
+    color: var(--ug-black);
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  color: var(--ug-black);
   font-family: inherit;
   font-weight: bolder;
 }
 
 p{
   line-height: 1.8;
-  color: var(--ug-black);
   margin: 0;
 }
 
@@ -84,4 +83,34 @@ video {
   margin-right: calc(50% - 49.6vw);
 }
 
+/* Paddings */
+.pt-xsm{
+  padding-top: 1.3333rem;
+}
+.pb-xsm{
+  padding-bottom: 1.3333rem;
+}
 
+.pt-sm{
+  padding-top: 2.6666rem;
+}
+
+.pb-sm{
+  padding-bottom: 2.6666rem;
+}
+
+.pt-md{
+  padding-top: 5.3333rem;
+}
+
+.pb-md{
+  padding-bottom: 5.33333rem;
+}
+
+.pt-lg{
+  padding-top: 8rem;
+}
+
+.pb-lg{
+  padding-bottom: 8rem;
+}

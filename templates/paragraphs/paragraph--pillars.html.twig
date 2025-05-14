@@ -1,5 +1,6 @@
-<div class="pillars d-flex flex-column justify-content-center">
+<div class="pillars d-flex flex-column align-items-center">
     {{ content.field_icon }}
-    <span class="fw-bold text-align-center">{{ content.field_title}} </span>
+    <h4 class="fw-bold">{{ content.field_title}} </h4>
     {{ content.field_body }}
+    {% if content.field_link.0 %}<a class="info-link" href="{{ content.field_link.0['#url'] }}">{{ content.field_link.0['#title'] }}</a>{% endif %}
 </div>

@@ -1,0 +1,40 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% set title = content.field_title.0 %}
+{% set body = content.body.0 %}
+{% set position = content.field_content_orientation[0]['#markup'] %}
+
+<div{{ attributes.addClass(classes) }}>
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+
+    {% if position == 'Vertical' %}
+    <div class="container-content">
+        <div class="mini-banner">
+            {% if title %}<h2 class="mb-2">{{ title }}</h2>{% endif %}
+            {% if body %}<p>{{ body }}</p>{% endif %}
+        </div>
+    </div>
+    {% endif  %}
+
+
+    {% if position == 'Horizontal' %}
+        <div class="container-content">
+            <div class="mini-banner {{ position }} ">
+                {% if title %}<h2 class="mb-2 pe-5">{{ title }}</h2>{% endif %}
+                {% if body %}{{ body }}{% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
+</div>

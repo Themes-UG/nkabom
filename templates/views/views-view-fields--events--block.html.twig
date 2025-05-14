@@ -31,26 +31,22 @@
 #}
   
       <div class="events-grid-content">
-
-        <p><a href="{{ fields.view_node.content }}"> {{ fields.title.content }} </a></p>
         
-        <div class="event-date-time">
-          <span style="color:#153d6c" class="font-weight-bolder"> Date: </span>
-          <span class="date">{{ fields.field_date.content }}</span>
+        <div class="event-date d-inline-flex flex-column align-items-center bg-ug-blue">
+          <span class="short-month">{{ fields.field_date_1.content }}</span>
+          <span class="day">{{ fields.field_date_2.content }}</span>
         </div>
 
-        {% if fields.field_time_event.content or fields.field_time_range.content %}
-        <div class="event-date-time"> 
-          <span style="color:#153d6c" class="font-weight-bolder"> Time: </span>
-          <span class="time"> {{ fields.field_time_event.content }}  {{ fields.field_time_range.content }}</span>
-        </div>  
-        {% endif %}  
+        <h4 class="event-title mt-3 mb-2"><a class="text-decoration-none" href="{{ fields.view_node.content }}"> {{ fields.title.content }} </a></h4>
+        
+        <div class="event-date-time">
+          <span class="date">{{ fields.field_date.content }}</span>
+        </div>
+  
 
         {% if fields.field_venue.content %}
-        <div class="event-date-time">
-          <span style="color:#153d6c" class="font-weight-bolder"> Venue: </span>
+        <div class="">
           <span class="venue"> {{ fields.field_venue.content }}</span>
-
         </div>  
         {% endif %}  
       </div>
